@@ -12,7 +12,7 @@
 // current Playfield here.
 
 import { createGhost } from './models.js';
-import { applyGravity, clampToTop } from './physics.js';
+import { applyGravity, applyFlap, clampToTop } from './physics.js';
 import { maybeSpawn, advance } from './spawner.js';
 import { overlaps, touchesGround } from './collision.js';
 import { scorePipePasses, collectOverlapping } from './scoring.js';
@@ -235,4 +235,65 @@ export function step(world, dt, rng, cfg) {
   next = scorePipePasses(next);
 
   return next;
+}
+
+/**
+ * Minimum time, in milliseconds, that must elapse after the World enters
+ * Game_Over before a flap input is allowed to restart it (Req 8.5, 8.6). The
+ * lockout prevents the same tap that caused the crash from immediately
+ * dismissing the Game_Over screen.
+ */
+export const RESTART_LOCKOUT_MS = 500;
+
+/**
+ * Route a single flap input into the simulation core based on the current
+ * Game_State. This is a PURE function: it never mutates `world`, never reads
+ * the clock itself, and always returns a World. The caller supplies `now`
+ * (wall-clock milliseconds, from the same source `step` stamps into
+ * `gameOverAt`) so restart timing stays deterministic and testable.
+ *
+ * Behavior by state:
+ *   - Ready:     transition to Playing and apply the first Flap impulse to the
+ *                Ghost, so the single input that starts the game also lifts the
+ *                Ghost (Req 2.1, 2.3).
+ *   - Playing:   replace the Ghost's vertical velocity with the flap impulse
+ *                (Req 2.2 / 3.2).
+ *   - Game_Over: reset to Ready — but only once at least RESTART_LOCKOUT_MS
+ *                have elapsed since `gameOverAt`; before then the flap is
+ *                ignored and the World stays in Game_Over (Req 8.5, 8.6).
+ *   - any other (Loading): ignore the flap and return the World unchanged
+ *                (Req 3.6).
+ *
+ * Returns a new World; the input World is not mutated.
+ *
+ * @param {World} world current world
+ * @param {number} now current wall-clock time in milliseconds
+ * @param {Config} cfg configuration (physics flap velocity + spawn fractions)
+ * @returns {World}
+ */
+export function handleFlap(world, now, cfg) {
+  switch (world.state) {
+    case 'Ready':
+      // Start the game and apply the first flap in a single step (Req 2.1, 2.3).
+      return {
+        ...world,
+        state: 'Playing',
+        ghost: applyFlap(world.ghost, cfg.physics),
+      };
+    case 'Playing':
+      // Replace the Ghost's vertical velocity with the flap impulse (Req 2.2).
+      return {
+        ...world,
+        ghost: applyFlap(world.ghost, cfg.physics),
+      };
+    case 'Game_Over':
+      // Restart only after the lockout window has fully elapsed (Req 8.5, 8.6).
+      if (world.gameOverAt !== null && now - world.gameOverAt >= RESTART_LOCKOUT_MS) {
+        return resetToReady(world, cfg);
+      }
+      return world;
+    default:
+      // Loading (or any non-interactive state): ignore the flap (Req 3.6).
+      return world;
+  }
 }

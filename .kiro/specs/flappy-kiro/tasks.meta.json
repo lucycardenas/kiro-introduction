@@ -51,6 +51,34 @@
     "8.3 Write property test: collisions suppress the pipe point": {
       "status": "passed",
       "lastRunTimestamp": 1793248457000
+    },
+    "9.2 Write property test: Ready start position scales with the Playfield": {
+      "status": "passed",
+      "lastRunTimestamp": 1793249773893
+    },
+    "9.3 Write property test: motion only advances while Playing": {
+      "status": "passed",
+      "lastRunTimestamp": 1793249800074
+    },
+    "13.3 Write property test: stored high score is the running maximum": {
+      "status": "passed",
+      "lastRunTimestamp": 1793249801394
+    },
+    "9.4 Write property test: reset clears the World": {
+      "status": "passed",
+      "lastRunTimestamp": 1793249803802
+    },
+    "13.2 Write property test: game-over sound triggers exactly once": {
+      "status": "passed",
+      "lastRunTimestamp": 1793249867734
+    },
+    "10.3 Write property test: restart is gated by the 500 ms lockout": {
+      "status": "passed",
+      "lastRunTimestamp": 1793250011684
+    },
+    "10.2 Write property test: flap is ignored outside active states": {
+      "status": "passed",
+      "lastRunTimestamp": 1793250017206
     }
   },
   "executionHistory": {
@@ -270,6 +298,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245278864
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250447291
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250451229
       }
     ],
     "7.1 Implement `pipeSpawner` with injected RNG": [
@@ -440,6 +478,16 @@
         "executionId": "80c20537-17e5-47ba-b366-af4884389485",
         "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
         "timestamp": 1793248473596
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249605990
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249608676
       }
     ],
     "9.1 Implement world creation, reset, and the Playing-only step": [
@@ -464,6 +512,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245280591
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249721952
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249818586
       }
     ],
     "9.3 Write property test: motion only advances while Playing": [
@@ -471,6 +529,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245280705
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249722738
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249819279
       }
     ],
     "9.4 Write property test: reset clears the World": [
@@ -478,6 +546,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245280831
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249723718
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249816190
       }
     ],
     "10.1 Implement flap handling and restart timing": [
@@ -485,6 +563,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245280992
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249720501
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249815210
       }
     ],
     "10.2 Write property test: flap is ignored outside active states": [
@@ -492,6 +580,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245281126
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249948488
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250173117
       }
     ],
     "10.3 Write property test: restart is gated by the 500 ms lockout": [
@@ -499,6 +597,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245281253
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249949529
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250173989
       }
     ],
     "11. Checkpoint - Ensure all core tests pass": [
@@ -506,6 +614,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245281382
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250454589
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250458308
       }
     ],
     "12.1 Implement `HighScoreStore` over localStorage": [
@@ -559,6 +677,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245281976
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249824195
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249942415
       }
     ],
     "13.3 Write property test: stored high score is the running maximum": [
@@ -566,6 +694,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245282093
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249724832
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249817612
       }
     ],
     "13.4 Write mock-based test for jump audio resilience": [
@@ -573,6 +711,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245282208
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249824820
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249943390
       }
     ],
     "14.1 Implement `AssetLoader.load(deadlineMs)`": [
@@ -597,6 +745,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245282545
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249613202
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249715858
       }
     ],
     "15.1 Implement `InputController`": [
@@ -706,6 +864,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245283489
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249613642
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249716862
       }
     ],
     "18. Checkpoint - Ensure all adapter tests pass": [
@@ -713,6 +881,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245283619
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250461412
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250464575
       }
     ],
     "19.1 Implement the `Game` orchestrator": [
@@ -720,6 +898,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245283742
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249947546
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250174920
       }
     ],
     "19.2 Wire the HTML entry point": [
@@ -727,6 +915,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245283857
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250178851
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250297982
       }
     ],
     "19.3 Write integration tests for orchestration flows": [
@@ -734,6 +932,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245283974
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250301551
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250439819
       }
     ],
     "20. Final checkpoint - Ensure all tests pass": [
@@ -741,6 +949,16 @@
         "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
         "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
         "timestamp": 1793245284097
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250467705
+      },
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250471087
       }
     ],
     "15. Implement the InputController adapter": [
@@ -769,6 +987,48 @@
         "executionId": "80c20537-17e5-47ba-b366-af4884389485",
         "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
         "timestamp": 1793248473672
+      }
+    ],
+    "14. Implement the AssetLoader adapter": [
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249715932
+      }
+    ],
+    "17. Implement the Renderer adapter": [
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249716908
+      }
+    ],
+    "9. Implement the simulation step and world lifecycle in the core": [
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249819346
+      }
+    ],
+    "13. Implement the AudioSystem adapter and high-score persistence hook": [
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793249943448
+      }
+    ],
+    "10. Implement restart lockout and flap gating in the core": [
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250174037
+      }
+    ],
+    "19. Implement the Game orchestrator and wire the entry point": [
+      {
+        "executionId": "7d2c9a24-b4ed-4dee-a533-fd0049e2d673",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793250439869
       }
     ]
   }

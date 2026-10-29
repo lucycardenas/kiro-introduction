@@ -73,7 +73,7 @@ Property-based tests use [fast-check](https://github.com/dubzzz/fast-check) with
     - **Property 16: Ground contact is detected**
     - **Validates: Requirements 7.2**
 
-- [~] 6. Checkpoint - Ensure all tests pass
+- [x] 6. Checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [x] 7. Implement the pipe/collectible spawner and scrolling
@@ -118,43 +118,43 @@ Property-based tests use [fast-check](https://github.com/dubzzz/fast-check) with
     - **Property 13: Score is always a non-negative integer**
     - **Validates: Requirements 5.4**
 
-  - [ ] 8.5 Write property test: collecting awards exactly one point and is final
+  - [x] 8.5 Write property test: collecting awards exactly one point and is final
     - **Property 14: Collecting awards exactly one point and is final**
     - **Validates: Requirements 6.2, 6.3**
 
-- [ ] 9. Implement the simulation step and world lifecycle in the core
+- [x] 9. Implement the simulation step and world lifecycle in the core
   - [x] 9.1 Implement world creation, reset, and the Playing-only step
     - Create `src/core/simulation.js` with `createReadyWorld(playfield, highScore, cfg)` placing the ghost at 30% width / 50% height with score 0, `resetToReady(world, cfg)` clearing all pipes/collectibles and zeroing score, and `step(world, dt, rng, cfg)` that advances physics, spawning, scrolling, scoring, and collision checks only while Playing (no motion otherwise)
     - On collision (pipe overlap or ground) transition to `Game_Over`, stop all motion, and stamp `gameOverAt`; clamp the ghost to the top boundary when it reaches it
     - Resolve percentage-based config fractions against the current playfield dimensions
     - _Requirements: 1.3, 1.6, 7.1, 7.2, 7.3, 7.5, 8.7, 8.8_
 
-  - [~] 9.2 Write property test: Ready start position scales with the Playfield
+  - [x] 9.2 Write property test: Ready start position scales with the Playfield
     - **Property 1: Ready start position scales with the Playfield**
     - **Validates: Requirements 1.3**
 
-  - [~] 9.3 Write property test: motion only advances while Playing
+  - [x] 9.3 Write property test: motion only advances while Playing
     - **Property 2: Motion only advances while Playing**
     - **Validates: Requirements 1.6, 7.5**
 
-  - [~] 9.4 Write property test: reset clears the World
+  - [x] 9.4 Write property test: reset clears the World
     - **Property 21: Reset clears the World**
     - **Validates: Requirements 8.7, 8.8**
 
-- [ ] 10. Implement restart lockout and flap gating in the core
-  - [~] 10.1 Implement flap handling and restart timing
+- [x] 10. Implement restart lockout and flap gating in the core
+  - [x] 10.1 Implement flap handling and restart timing
     - Add `handleFlap(world, now, cfg)` to `src/core/simulation.js`: start the game from Ready (applying exactly one flap impulse), flap while Playing, reset to Ready from Game_Over only when ≥500 ms since `gameOverAt`, and ignore flap while Loading
     - _Requirements: 2.1, 2.3, 3.2, 3.6, 8.5, 8.6_
 
-  - [~] 10.2 Write property test: flap is ignored outside active states
+  - [x] 10.2 Write property test: flap is ignored outside active states
     - **Property 6: Flap is ignored outside active states**
     - **Validates: Requirements 3.6**
 
-  - [~] 10.3 Write property test: restart is gated by the 500 ms lockout
+  - [x] 10.3 Write property test: restart is gated by the 500 ms lockout
     - **Property 20: Restart is gated by the 500 ms lockout**
     - **Validates: Requirements 8.5, 8.6**
 
-- [~] 11. Checkpoint - Ensure all core tests pass
+- [x] 11. Checkpoint - Ensure all core tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 12. Implement the HighScoreStore adapter
@@ -166,30 +166,30 @@ Property-based tests use [fast-check](https://github.com/dubzzz/fast-check) with
     - Test read/write round-trip and fallback to 0 on missing/malformed values using a mocked `localStorage`
     - _Requirements: 8.3, 8.4_
 
-- [ ] 13. Implement the AudioSystem adapter and high-score persistence hook
+- [x] 13. Implement the AudioSystem adapter and high-score persistence hook
   - [x] 13.1 Implement `AudioSystem` and wire high-score update on Game_Over
     - Create `src/adapters/audio.js` with `playJump()` (plays `assets/jump.wav`) and `playGameOver()` (plays `assets/game_over.wav`), both swallowing failures so the loop is never interrupted
     - Add a core helper that, on entering Game_Over, computes `highScore = max(score, storedHighScore)` and triggers the game-over sound exactly once via a `gameOverSoundPlayed` flag
     - _Requirements: 3.4, 3.5, 7.4, 8.4_
 
-  - [~] 13.2 Write property test: game-over sound triggers exactly once
+  - [x] 13.2 Write property test: game-over sound triggers exactly once
     - **Property 18: Game-over sound triggers exactly once**
     - **Validates: Requirements 7.4**
 
-  - [~] 13.3 Write property test: stored high score is the running maximum
+  - [x] 13.3 Write property test: stored high score is the running maximum
     - **Property 19: Stored high score is the running maximum**
     - **Validates: Requirements 8.4**
 
-  - [~] 13.4 Write mock-based test for jump audio resilience
+  - [x] 13.4 Write mock-based test for jump audio resilience
     - Verify a flap triggers `playJump` and that audio failure does not throw or interrupt the tick
     - _Requirements: 3.4, 3.5_
 
-- [ ] 14. Implement the AssetLoader adapter
+- [x] 14. Implement the AssetLoader adapter
   - [x] 14.1 Implement `AssetLoader.load(deadlineMs)`
     - Create `src/adapters/assetLoader.js` that preloads `assets/ghosty.png`, `img/chiikawa_point.png`, `assets/jump.wav`, and `assets/game_over.wav`, racing against a 5-second deadline; resolve with `LoadedAssets` on success, reject on timeout/error, and surface per-asset sprite failure so the renderer can fall back
     - _Requirements: 1.1, 1.2, 9.2_
 
-  - [~] 14.2 Write integration tests for asset loading paths
+  - [x] 14.2 Write integration tests for asset loading paths
     - Using mocked image/audio loading, verify success resolves assets (enabling Loading → Ready) and timeout/error rejects (staying in Loading)
     - _Requirements: 1.1, 1.2_
 
@@ -215,32 +215,32 @@ Property-based tests use [fast-check](https://github.com/dubzzz/fast-check) with
     - **Property 23: Long frames are clamped**
     - **Validates: Requirements 10.3**
 
-- [ ] 17. Implement the Renderer adapter
+- [x] 17. Implement the Renderer adapter
   - [x] 17.1 Implement `Renderer` on Canvas 2D
     - Create `src/adapters/renderer.js` with `resize(width, height)` and `render(world, assets)`; set `imageSmoothingEnabled = false`, draw the ghost from `assets/ghosty.png` (solid-color placeholder plus a "sprite missing" indication when absent), draw collectibles from `img/chiikawa_point.png`, draw pipes, scroll the background while Playing and hold it otherwise, and render the score/high-score in a pixel-style font ≥16 px, including the start prompt (Ready) and final score + restart prompt + high score (Game_Over)
     - _Requirements: 1.4, 1.5, 5.4, 6.5, 8.1, 8.2, 8.3, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6_
 
-  - [~] 17.2 Write smoke/integration tests for rendering
+  - [x] 17.2 Write smoke/integration tests for rendering
     - Verify image smoothing is disabled and score font height is ≥16 px on the initialized context; verify ghost placeholder is drawn when the sprite is missing and background scrolls only while Playing (using a mocked 2D context)
     - _Requirements: 9.2, 9.3, 9.4, 9.5, 9.6_
 
-- [~] 18. Checkpoint - Ensure all adapter tests pass
+- [x] 18. Checkpoint - Ensure all adapter tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 19. Implement the Game orchestrator and wire the entry point
-  - [~] 19.1 Implement the `Game` orchestrator
+- [x] 19. Implement the Game orchestrator and wire the entry point
+  - [x] 19.1 Implement the `Game` orchestrator
     - Create `src/game.js` wiring all adapters to the core: `start()` kicks off asset loading and transitions Loading → Ready on success (or shows the error and stays in Loading on failure), `tick(dt)` advances the core step and renders, `handleFlap(now)` routes input into the core (start/flap/restart), and `setVisible(visible)` controls loop pausing; trigger `playJump` on flap and `playGameOver` once on Game_Over, and persist the high score via `HighScoreStore`
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 2.1, 2.2, 2.3, 3.4, 5.5, 7.4, 7.5, 8.3, 8.4, 10.1, 10.4_
 
-  - [~] 19.2 Wire the HTML entry point
+  - [x] 19.2 Wire the HTML entry point
     - Create `src/main.js` imported by `index.html` that constructs the canvas-backed adapters and the `Game`, registers input and visibility listeners, calls `Game.start()`, and starts the `GameLoop`
     - _Requirements: 1.1, 2.1, 2.2, 3.7, 10.1_
 
-  - [~] 19.3 Write integration tests for orchestration flows
+  - [x] 19.3 Write integration tests for orchestration flows
     - Verify Loading → Ready on asset success vs. staying in Loading on failure; Ready + flap → Playing with pipes scrolling next frame and exactly one impulse; score display updates within one frame; Game_Over shows final score, restart prompt, and stored high score
     - _Requirements: 1.1, 1.2, 2.1, 2.2, 5.5, 8.1, 8.2, 8.3_
 
-- [~] 20. Final checkpoint - Ensure all tests pass
+- [x] 20. Final checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes
