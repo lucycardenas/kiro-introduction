@@ -1,0 +1,775 @@
+{
+  "pbtResults": {
+    "4.2 Write property test: gravity accumulates each update": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248007779
+    },
+    "4.3 Write property test: flap sets a fixed upward velocity": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248019259
+    },
+    "4.4 Write property test: downward velocity is capped": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248020050
+    },
+    "4.5 Write property test: top boundary clamps position and zeros velocity": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248081576
+    },
+    "5.2 Write property test: pipe overlap is detected as collision": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248114048
+    },
+    "16.2 Write property test: movement is delta-time invariant": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248125314
+    },
+    "16.3 Write property test: long frames are clamped": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248188611
+    },
+    "7.2 Write property test: pipes and collectibles scroll left at the configured speed": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248321257
+    },
+    "7.3 Write property test: spawn spacing stays within bounds": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248347287
+    },
+    "8.2 Write property test: each pipe scores at most once": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248436186
+    },
+    "8.5 Write property test: collecting awards exactly one point and is final": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248439350
+    },
+    "8.4 Write property test: score is always a non-negative integer": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248454881
+    },
+    "8.3 Write property test: collisions suppress the pipe point": {
+      "status": "passed",
+      "lastRunTimestamp": 1793248457000
+    }
+  },
+  "executionHistory": {
+    "1. Set up project structure, tooling, and HTML shell": [
+      {
+        "executionId": "08a893bd-d676-404b-a038-42bde8f8488a",
+        "chatSessionId": "sess_bd10f66c-817d-4308-b8f8-8c0d134f7cd5",
+        "timestamp": 1793238086591
+      },
+      {
+        "executionId": "08a893bd-d676-404b-a038-42bde8f8488a",
+        "chatSessionId": "sess_bd10f66c-817d-4308-b8f8-8c0d134f7cd5",
+        "timestamp": 1793238213161
+      }
+    ],
+    "2.1 Create data model definitions and factory helpers": [
+      {
+        "executionId": "0f5ec296-5839-4cb3-a57c-7e6a58dc5a91",
+        "chatSessionId": "sess_081f6d4e-0af6-44d4-9d15-6f72f28bbc52",
+        "timestamp": 1793238239649
+      },
+      {
+        "executionId": "cac430f1-de97-43fc-8992-f6a02c222fa6",
+        "chatSessionId": "sess_3b973c05-db08-4ffd-905e-a0bcee7e1cea",
+        "timestamp": 1793238262364
+      },
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245277022
+      },
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245290310
+      }
+    ],
+    "2.2 Write unit tests for data model helpers": [
+      {
+        "executionId": "6a9b35d2-9168-43e1-9c2d-c84b24d2489b",
+        "chatSessionId": "sess_585db496-6dd8-429e-82dd-4bdba7439fae",
+        "timestamp": 1793238290903
+      },
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245277176
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247936932
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248035847
+      }
+    ],
+    "3.1 Implement `GameStateMachine`": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245277304
+      },
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245292079
+      }
+    ],
+    "3.2 Write unit tests for the state machine": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245277532
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247937882
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248034454
+      }
+    ],
+    "4.1 Implement pure physics functions": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245277653
+      },
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245292631
+      }
+    ],
+    "4.2 Write property test: gravity accumulates each update": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245277783
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247939270
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248036771
+      }
+    ],
+    "4.3 Write property test: flap sets a fixed upward velocity": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245277963
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247940273
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248038170
+      }
+    ],
+    "4.4 Write property test: downward velocity is capped": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245278116
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247941023
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248038728
+      }
+    ],
+    "4.5 Write property test: top boundary clamps position and zeros velocity": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245278235
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248042202
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248137251
+      }
+    ],
+    "5.1 Implement pure collision functions": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245278373
+      },
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245293526
+      }
+    ],
+    "5.2 Write property test: pipe overlap is detected as collision": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245278597
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248043139
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248138708
+      }
+    ],
+    "5.3 Write property test: ground contact is detected": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245278721
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248044598
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248136294
+      }
+    ],
+    "6. Checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245278864
+      }
+    ],
+    "7.1 Implement `pipeSpawner` with injected RNG": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245279031
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247725371
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247929677
+      }
+    ],
+    "7.2 Write property test: pipes and collectibles scroll left at the configured speed": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245279167
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248204730
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248372929
+      }
+    ],
+    "7.3 Write property test: spawn spacing stays within bounds": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245279295
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248205690
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248374317
+      }
+    ],
+    "7.4 Write property test: spawned gaps are valid": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245279510
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248206731
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248374908
+      }
+    ],
+    "7.5 Write property test: off-screen entities are removed": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245279627
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248377993
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248469636
+      }
+    ],
+    "8.1 Implement pure scoring functions": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245279740
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247726741
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247931117
+      }
+    ],
+    "8.2 Write property test: each pipe scores at most once": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245279869
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248378951
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248472923
+      }
+    ],
+    "8.3 Write property test: collisions suppress the pipe point": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280003
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248380439
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248471488
+      }
+    ],
+    "8.4 Write property test: score is always a non-negative integer": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280115
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248381257
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248470581
+      }
+    ],
+    "8.5 Write property test: collecting awards exactly one point and is final": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280237
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248382163
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248473596
+      }
+    ],
+    "9.1 Implement world creation, reset, and the Playing-only step": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280421
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248202436
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248370542
+      }
+    ],
+    "9.2 Write property test: Ready start position scales with the Playfield": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280591
+      }
+    ],
+    "9.3 Write property test: motion only advances while Playing": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280705
+      }
+    ],
+    "9.4 Write property test: reset clears the World": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280831
+      }
+    ],
+    "10.1 Implement flap handling and restart timing": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245280992
+      }
+    ],
+    "10.2 Write property test: flap is ignored outside active states": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245281126
+      }
+    ],
+    "10.3 Write property test: restart is gated by the 500 ms lockout": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245281253
+      }
+    ],
+    "11. Checkpoint - Ensure all core tests pass": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245281382
+      }
+    ],
+    "12.1 Implement `HighScoreStore` over localStorage": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245281561
+      },
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245294547
+      }
+    ],
+    "12.2 Write mock-based tests for HighScoreStore": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245281672
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247729801
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247932921
+      }
+    ],
+    "13.1 Implement `AudioSystem` and wire high-score update on Game_Over": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245281796
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248203345
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248371940
+      }
+    ],
+    "13.2 Write property test: game-over sound triggers exactly once": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245281976
+      }
+    ],
+    "13.3 Write property test: stored high score is the running maximum": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245282093
+      }
+    ],
+    "13.4 Write mock-based test for jump audio resilience": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245282208
+      }
+    ],
+    "14.1 Implement `AssetLoader.load(deadlineMs)`": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245282323
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247727707
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247928782
+      }
+    ],
+    "14.2 Write integration tests for asset loading paths": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245282545
+      }
+    ],
+    "15.1 Implement `InputController`": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245282654
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793245634004
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247721382
+      }
+    ],
+    "15.2 Write unit test for input normalization": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245282802
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248045485
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248139614
+      }
+    ],
+    "16.1 Implement `GameLoop` over requestAnimationFrame": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245282969
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793245634908
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247720979
+      }
+    ],
+    "16.2 Write property test: movement is delta-time invariant": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283090
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248046432
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248134926
+      }
+    ],
+    "16.3 Write property test: long frames are clamped": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283200
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248140503
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248197960
+      }
+    ],
+    "17.1 Implement `Renderer` on Canvas 2D": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283321
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247729076
+      },
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793247932057
+      }
+    ],
+    "17.2 Write smoke/integration tests for rendering": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283489
+      }
+    ],
+    "18. Checkpoint - Ensure all adapter tests pass": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283619
+      }
+    ],
+    "19.1 Implement the `Game` orchestrator": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283742
+      }
+    ],
+    "19.2 Wire the HTML entry point": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283857
+      }
+    ],
+    "19.3 Write integration tests for orchestration flows": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245283974
+      }
+    ],
+    "20. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "5ebcd4ea-db30-47a2-985c-691e947c8083",
+        "chatSessionId": "sess_a5f64b6d-d527-427c-be70-12c458ad719b",
+        "timestamp": 1793245284097
+      }
+    ],
+    "15. Implement the InputController adapter": [
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248139682
+      }
+    ],
+    "16. Implement the GameLoop adapter": [
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248198049
+      }
+    ],
+    "7. Implement the pipe/collectible spawner and scrolling": [
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248469736
+      }
+    ],
+    "8. Implement scoring (pipe passes and collectibles)": [
+      {
+        "executionId": "80c20537-17e5-47ba-b366-af4884389485",
+        "chatSessionId": "sess_0c2807d2-856c-475a-ba24-661973b0c752",
+        "timestamp": 1793248473672
+      }
+    ]
+  }
+}
